@@ -5,4 +5,4 @@ from django.contrib.auth.models import User
 class RestProject(models.Model):
     user = models.ForeignKey(User, on_delete=models.CASCADE)
     name = models.CharField(max_length=50)
-    url = models.CharField(max_length=100)
+    api_url = models.CharField(max_length=100)
