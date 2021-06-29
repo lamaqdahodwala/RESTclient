@@ -38,8 +38,9 @@ INSTALLED_APPS = [
     "django.contrib.messages",
     "django.contrib.staticfiles",
     "accounts.apps.AccountsConfig",
-    'main.apps.MainConfig',
-    'django_svelte'
+    "main.apps.MainConfig",
+    "django_svelte",
+    "rest_framework",
 ]
 
 MIDDLEWARE = [
@@ -129,5 +130,5 @@ STATICFILES_DIRS = [str(BASE_DIR.parent / "svelte" / "public" / "build")]
 
 DEFAULT_AUTO_FIELD = "django.db.models.BigAutoField"
 
-LOGIN_REDIRECT_URL = '/'
-LOGOUT_REDIRECT_URL = '/'
+LOGIN_REDIRECT_URL = "/"
+LOGOUT_REDIRECT_URL = "/"
