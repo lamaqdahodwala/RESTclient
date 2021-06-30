@@ -1,12 +1,14 @@
 {% extends 'base.html' %} 
 
 {% block content %} 
-
+<br><br>
 <div class="container">
     <h1 class="title">New Project</h1>
     <form  method="post">
         {% csrf_token %} 
         {{form.as_p}}
+        <br><br>
+        <button class="button is-primary" type="submit">Create</button>
     </form>
 </div>
 
