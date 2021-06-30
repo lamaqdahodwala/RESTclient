@@ -3,6 +3,18 @@
 {% block content %} 
 <br><br>
 <div class="container">
+    {% if messages %}
+        {% for message in messages %} 
+            <div class="message is-danger">
+                <div class="message-header">
+                    <h1 class='title'>Yikes!</h1>
+                </div>
+                <div class="message-body">
+                    Your form wasn't submitted successfully
+                </div>
+            </div>
+        {% endfor %}
+    {% endif %}
     <h1 class="title">New Project</h1>
     <form  method="post">
         {% csrf_token %} 

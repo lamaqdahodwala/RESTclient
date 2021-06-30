@@ -25,7 +25,7 @@
 						<a href='/project/{i.pk}' class="card-header-title title">{i.project_name}</a>
 					</div>
 					<div class="card-content">
-						URL: {i.req_url}
+						URL: {i.request_url}
 					</div>
 				</div>
 				<br><br>
