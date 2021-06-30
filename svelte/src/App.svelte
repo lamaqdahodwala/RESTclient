@@ -16,15 +16,18 @@
 		</div>
 	{:then all} 
 		<div class="container">
+			<h1 class="title">Your projects</h1>
+			<hr>
 			{#each all as i}
 				<div class="card">
 					<div class="card-header">
-						<h1 class="card-header-title title">{i.project_name}</h1>
+						<a href='/project/{i.pk}' class="card-header-title title">{i.project_name}</a>
 					</div>
 					<div class="card-content">
 						URL: {i.req_url}
 					</div>
 				</div>
+				<br><br>
 			{/each}
 		</div>
 	{/await}

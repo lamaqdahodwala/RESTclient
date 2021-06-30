@@ -81,7 +81,7 @@ let exportable = [];
 
 // Add your component names here!
 [
-  "App",
+	"App",
   // "MyComponent",
 ].forEach((d) => exportable.push(componentExportDetails(d)));
 
