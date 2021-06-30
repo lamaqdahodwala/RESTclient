@@ -14,6 +14,7 @@ class GetProjectData(APIView):
             ser = ProjectSerializer(project)
             return Response(ser.data)
 
+
 class GetAllProjects(APIView):
     def get(self, req):
         if req.user.is_authenticated:
