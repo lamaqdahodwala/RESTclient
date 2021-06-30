@@ -4,4 +4,4 @@ from rest_framework.serializers import ModelSerializer
 class ProjectSerializer(ModelSerializer):
     class Meta:
         model = Project
-        fields = ("user", "req_url")
+        fields = ("owner", "req_url")
