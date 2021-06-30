@@ -11,8 +11,9 @@
 <main>
 	<br><br><br>
 	{#await all_projects}
-		<div class="container">
+		<div class="container has-text-centered">
 			<progress class='progress is-primary' max='100'></progress>
+			<p class="help">Loading!</p>
 		</div>
 	{:then all} 
 		<div class="container">
