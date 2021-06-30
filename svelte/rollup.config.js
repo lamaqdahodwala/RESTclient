@@ -82,7 +82,7 @@ let exportable = [];
 // Add your component names here!
 [
 	"App",
-  // "MyComponent",
+	'Workspace'
 ].forEach((d) => exportable.push(componentExportDetails(d)));
 
 export default exportable;
