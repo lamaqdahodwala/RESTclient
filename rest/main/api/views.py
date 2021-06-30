@@ -6,7 +6,7 @@ from django.shortcuts import get_object_or_404
 
 
 class GetProjectData(APIView):
-    http_method_names = ["GET"]
+    # http_method_names = ['GET',]
 
     def get(self, req, pk):
         if req.user.is_authenticated:
