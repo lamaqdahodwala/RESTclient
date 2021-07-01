@@ -1,5 +1,5 @@
 from django.http.response import HttpResponseRedirect
-from django.shortcuts import render
+from django.shortcuts import get_object_or_404, render
 from django.contrib import messages
 from .models import Project
 from .forms import ProjectModelForm
@@ -23,3 +23,11 @@ def new_project(req):
     else:
         form = ProjectModelForm
         return render(req, 'new_project.html', {'form': form})
+
+
+def workspace(req, pk):
+    if req.user.is_authenticated:
+        project = get_object_or_404(Project, owner=req.user, pk=pk)
+        return render(req, 'workspace.html', {"props": {"id": project.pk}})
+    else:
+        return HttpResponseRedirect('/')
