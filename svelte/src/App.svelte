@@ -39,7 +39,7 @@
 			<br>
 			<div class="box">
 				<div class="media">
-					<a href="#" class="button is-primary">Create project</a>
+					<a href="/new" class="button is-primary">Create project</a>
 				</div>
 			</div>
 		</div>

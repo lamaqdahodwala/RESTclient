@@ -21,3 +21,14 @@ class GetAllProjects(APIView):
             projects = get_list_or_404(Project, owner=req.user)
             ser = ProjectSerializer(projects, many=True)
             return Response(ser.data)
+
+class ChangeNameOfProject(APIView):
+    http_method_names = ['POST',]
+    def post(self, req):
+        if req.user.is_authenticated:
+            p_id = req.data.get('id')
+            to = req.data.get('to')
+            project: Project = Project.objects.get(pk=p_id)
+            project.project_name = to
+            project.save()
+            
